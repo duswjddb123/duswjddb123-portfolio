@@ -1,242 +1,106 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>유정연 — Portfolio</title>
-    <meta
-      name="description"
-      content="학생 유정연의 개인 포트폴리오. 따뜻한 빛으로 작은 서비스를 설계합니다."
-    />
-    <meta name="theme-color" content="#f6f1ea" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script>
-      document.documentElement.classList.add("js");
-    </script>
-  </head>
-  <body id="top">
-    <a class="skip" href="#main">본문으로 건너뛰기</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="프론트엔드 개발자 · UI/UX 디자이너 유정연의 포트폴리오">
+  <title>유정연 | 포트폴리오</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+    <span class="grain"></span>
+  </div>
 
-    <header class="site-header" data-header>
-      <div class="wrap bar">
-        <a class="logo" href="#top">Do it!</a>
+  <header class="site-header" id="top">
+    <a class="logo" href="#hero">유정연<span class="logo-mark">.</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="visually-hidden">메뉴</span>
+    </button>
+    <nav id="site-nav" class="site-nav">
+      <a href="#hero">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-        <nav class="nav-desktop" aria-label="주요">
-          <a href="#work">작업</a>
-          <a href="#contact">연락</a>
-        </nav>
+  <main>
+    <section id="hero" class="hero">
+      <p class="eyebrow">Portfolio</p>
+      <h1>안녕하세요!<br>저는 <em>유정연</em>입니다.</h1>
+      <p class="role">프론트엔드 개발자 · UI/UX 디자이너</p>
+      <a class="hero-link" href="#projects">프로젝트 보기</a>
+    </section>
 
-        <a class="nav-cta" href="#contact">이야기하기</a>
-
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-nav"
-          data-nav-toggle
-        >
-          <span class="sr-only" data-nav-label>메뉴 열기</span>
-          <span class="burger" aria-hidden="true"></span>
-        </button>
+    <section id="projects" class="projects">
+      <div class="section-head">
+        <p class="eyebrow">Selected work</p>
+        <h2>프로젝트</h2>
       </div>
-
-      <div id="mobile-nav" class="nav-mobile">
-        <nav class="wrap nav-mobile-inner" aria-label="모바일">
-          <a href="#work">작업</a>
-          <a href="#contact">연락</a>
-          <a class="nav-cta" href="#contact">이야기하기</a>
-        </nav>
+      <div class="project-cards">
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80" alt="코드 에디터 화면이 보이는 웹 개발 작업" width="900" height="600">
+            <span class="card-index">01</span>
+          </div>
+          <h3>프로젝트 1</h3>
+          <p>React 기반 웹앱 개발</p>
+        </article>
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80" alt="함께 화면을 보며 작업하는 팀" width="900" height="600">
+            <span class="card-index">02</span>
+          </div>
+          <h3>프로젝트 2</h3>
+          <p>반응형 포트폴리오 사이트</p>
+        </article>
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80" alt="노트북 위에서 진행 중인 디자인 작업" width="900" height="600">
+            <span class="card-index">03</span>
+          </div>
+          <h3>프로젝트 3</h3>
+          <p>UI/UX 디자인 시스템 구축</p>
+        </article>
       </div>
-    </header>
+    </section>
 
-    <main id="main">
-      <section class="hero">
-        <img
-          class="hero-bg"
-          src="images/hero.jpg"
-          alt="리넨 커튼 사이로 들어온 아침 햇살 아래, 테라코타 찻잔과 펼친 노트, 올리브 가지와 조약돌이 놓인 나무 책상"
-          width="1600"
-          height="900"
-        />
-        <div class="wrap hero-copy">
-          <p class="kicker">Student Portfolio · 2026</p>
-          <h1>따뜻한 빛으로<br />하루를 적습니다</h1>
-          <p class="lead">
-            안녕하세요, 유정연입니다. 빛과 여백, 손끝의 온도를 단서로 삼아
-            일상 속 작은 서비스를 설계하는 학생입니다.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-solid" href="#work">작업 보기</a>
-            <a class="btn btn-ghost" href="#contact">연락하기</a>
-          </div>
+    <section id="contact" class="contact">
+      <div class="contact-panel">
+        <div class="section-head">
+          <p class="eyebrow">Say hello</p>
+          <h2>Contact</h2>
         </div>
-      </section>
-
-      <section id="work" class="section work">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">Selected Work</p>
-            <h2>세 가지 온도의 작업</h2>
-            <p class="section-lead">
-              브랜드, 제품, 에디토리얼. 서로 다른 결을 따뜻한 팔레트로 묶었습니다.
-            </p>
-          </div>
-
-          <div class="cards">
-            <article class="card reveal">
-              <div class="card-visual tone-market" aria-hidden="true">
-                <span>01</span>
-              </div>
-              <div class="card-body">
-                <p class="card-meta">Branding · UI</p>
-                <h3>모닝 마켓</h3>
-                <p>
-                  동네 장터가 화면 안에서도 사람 냄새를 잃지 않도록, 흙빛 팔레트와
-                  느슨한 타이포로 주문 흐름을 다시 짰습니다.
-                </p>
-                <button class="card-action" type="button" data-project="모닝 마켓">
-                  이 작업으로 연락
-                  <span aria-hidden="true">→</span>
-                </button>
-              </div>
-            </article>
-
-            <article class="card reveal">
-              <div class="card-visual tone-study" aria-hidden="true">
-                <span>02</span>
-              </div>
-              <div class="card-body">
-                <p class="card-meta">Product · Motion</p>
-                <h3>스터디 네스트</h3>
-                <p>
-                  알림 대신 은은한 빛으로 집중 시간을 알려 주는 학습 타이머.
-                  시작과 끝이 부드럽게 이어지도록 동작을 다듬었습니다.
-                </p>
-                <button class="card-action" type="button" data-project="스터디 네스트">
-                  이 작업으로 연락
-                  <span aria-hidden="true">→</span>
-                </button>
-              </div>
-            </article>
-
-            <article class="card reveal">
-              <div class="card-visual tone-note" aria-hidden="true">
-                <span>03</span>
-              </div>
-              <div class="card-body">
-                <p class="card-meta">Editorial · Web</p>
-                <h3>시즌 노트</h3>
-                <p>
-                  계절이 바뀔 때마다 레시피와 짧은 메모를 남기는 저널.
-                  카드 한 장 안에 재료, 시간, 분위기를 함께 담았습니다.
-                </p>
-                <button class="card-action" type="button" data-project="시즌 노트">
-                  이 작업으로 연락
-                  <span aria-hidden="true">→</span>
-                </button>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact">
-        <div class="wrap">
-          <div class="contact-panel">
-            <div class="contact-copy">
-              <p class="kicker">Contact</p>
-              <h2>다음 이야기를<br />시작해요</h2>
-              <p>
-                수업, 협업, 작은 실험. 떠오르는 이야기를 편하게 남겨 주세요.
-                유정연이 따뜻한 답장을 준비합니다.
-              </p>
-              <ul class="contact-points">
-                <li>서울에서 활동하는 학생</li>
-                <li>브랜드 · 인터페이스 · 글</li>
-                <li>hello@jungyeon.studio</li>
-              </ul>
-            </div>
-
-            <form class="contact-form" novalidate data-form>
-              <div class="form-fields" data-form-fields>
-                <div class="field">
-                  <label for="name">이름</label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    autocomplete="name"
-                    placeholder="홍길동"
-                    aria-describedby="name-error"
-                  />
-                  <p class="error" id="name-error"></p>
-                </div>
-
-                <div class="field">
-                  <label for="email">이메일</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autocomplete="email"
-                    inputmode="email"
-                    placeholder="you@email.com"
-                    aria-describedby="email-error"
-                  />
-                  <p class="error" id="email-error"></p>
-                </div>
-
-                <div class="field">
-                  <label for="message">메시지</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    placeholder="어떤 이야기를 나누고 싶으신가요?"
-                    aria-describedby="message-error"
-                  ></textarea>
-                  <p class="error" id="message-error"></p>
-                </div>
-
-                <p class="form-note">
-                  입력한 내용은 이 브라우저 안에서만 확인되며, 서버로 전송되지 않습니다.
-                </p>
-
-                <button class="btn btn-solid btn-full" type="submit">메시지 보내기</button>
-              </div>
-
-              <div class="form-success" hidden data-form-success>
-                <p class="success-kicker">Received</p>
-                <h3 tabindex="-1" data-success-title>잘 적어두었어요</h3>
-                <p data-success-copy>따뜻한 답장을 준비할게요.</p>
-                <button class="btn btn-ghost" type="button" data-form-reset>
-                  다른 메시지 쓰기
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="wrap footer-inner">
-        <p>© 2026 유정연</p>
-        <a href="#top">맨 위로</a>
+        <form id="contactForm">
+          <label>
+            <span>이름</span>
+            <input type="text" name="name" placeholder="이름을 입력해 주세요" autocomplete="name" required>
+          </label>
+          <label>
+            <span>이메일</span>
+            <input type="email" name="email" placeholder="hello@email.com" autocomplete="email" required>
+          </label>
+          <label>
+            <span>메시지</span>
+            <textarea name="message" placeholder="무엇을 함께 만들고 싶으신가요?" rows="5" required></textarea>
+          </label>
+          <button type="submit">보내기</button>
+        </form>
+        <p id="formMessage" role="status" aria-live="polite"></p>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <footer>
+    <p>&copy; 2026 유정연. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
 </html>
